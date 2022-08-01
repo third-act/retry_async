@@ -80,11 +80,11 @@ async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
 
     if let Some(rng) = s.rng {
         let y: f64 = rng.gen();
-        println!("ECHO {:?}", y);
+        println!("DELTA {:?}", y);
     }
 
     let y: f64 = rng.gen();
-    println!("DELTA {:?}", y);
+    println!("ECHO {:?}", y);
 
     Ok(())
 }
