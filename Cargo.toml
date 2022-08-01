@@ -1,6 +1,6 @@
 [package]
 name = "retry_async"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2018"
 license = "MIT"
 description = "A library for retrying, with specific support for the Azure SDK for Rust (cf. https://github.com/Azure/azure-sdk-for-rust)."
