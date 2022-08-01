@@ -1,12 +1,12 @@
 A library for retrying, with specific support for the Azure SDK for Rust (cf. https://github.com/Azure/azure-sdk-for-rust).
 
-You can supply an option `Settings` parameter for controlling the maximum number of attempts, initial wait time, backoff and an optional rand generator.
+You can supply an optional `Settings` parameter for controlling the maximum number of attempts, initial wait time, backoff and an optional rand generator.
 
 # Example usage
 ```
 use azure_data_cosmos::prelude::*;
 use rand::prelude::*;
-use retry_async::{retry, Error as RetryError, Settings as RetrySettings};
+use retry_async::{retry, Error as RetryError, Settings};
 use std::{error::Error, time::Duration};
 mod device;
 mod user;
@@ -36,7 +36,7 @@ async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
 
     let mut rng = rand::thread_rng();
 
-    let mut s = RetrySettings {
+    let mut s = Settings {
         attempts: 5,
         initial_delay: Duration::from_millis(100),
         backoff: 2.0,
