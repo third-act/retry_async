@@ -3,7 +3,7 @@ name = "retry_async"
 version = "0.1.0"
 edition = "2018"
 license = "MIT"
-description = "A library for retrying."
+description = "A library for retrying, with specific support for the Azure SDK for Rust (cf. https://github.com/Azure/azure-sdk-for-rust)."
 repository = "https://github.com/third-act/retry_async/"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
